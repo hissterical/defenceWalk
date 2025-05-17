@@ -1,0 +1,248 @@
+{
+    "building": {
+        "name": "Simple Two-Floor Building (Scaled x5 with Door)",
+        "floors": [
+            {
+                "id": "floor_0",
+                "name": "Ground Floor",
+                "elevation": 0.0,
+                "height": 15.0,
+                "boundaries": [
+                    {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    {
+                        "x": 50.0,
+                        "y": 0.0
+                    },
+                    {
+                        "x": 50.0,
+                        "y": 40.0
+                    },
+                    {
+                        "x": 0.0,
+                        "y": 40.0
+                    }
+                ],
+                "thickness": 1.5,
+                "walls": [
+                    {
+                        "id": "wall_0_1a",
+                        "start": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "end": {
+                            "x": 20.0,
+                            "y": 0.0
+                        },
+                        "height": 15.0,
+                        "thickness": 1.5
+                    },
+                    {
+                        "id": "wall_0_1b",
+                        "start": {
+                            "x": 30.0,
+                            "y": 0.0
+                        },
+                        "end": {
+                            "x": 50.0,
+                            "y": 0.0
+                        },
+                        "height": 15.0,
+                        "thickness": 1.5
+                    },
+                    {
+                        "id": "wall_0_2",
+                        "start": {
+                            "x": 50.0,
+                            "y": 0.0
+                        },
+                        "end": {
+                            "x": 50.0,
+                            "y": 40.0
+                        },
+                        "height": 15.0,
+                        "thickness": 1.5
+                    },
+                    {
+                        "id": "wall_0_3",
+                        "start": {
+                            "x": 50.0,
+                            "y": 40.0
+                        },
+                        "end": {
+                            "x": 0.0,
+                            "y": 40.0
+                        },
+                        "height": 15.0,
+                        "thickness": 1.5
+                    },
+                    {
+                        "id": "wall_0_4",
+                        "start": {
+                            "x": 0.0,
+                            "y": 40.0
+                        },
+                        "end": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "height": 15.0,
+                        "thickness": 1.5
+                    },
+                    {
+                        "id": "wall_0_5",
+                        "start": {
+                            "x": 0.0,
+                            "y": 20.0
+                        },
+                        "end": {
+                            "x": 20.0,
+                            "y": 20.0
+                        },
+                        "height": 15.0,
+                        "thickness": 1.5
+                    },
+                    {
+                        "id": "wall_0_6",
+                        "start": {
+                            "x": 30.0,
+                            "y": 0.0
+                        },
+                        "end": {
+                            "x": 30.0,
+                            "y": 20.0
+                        },
+                        "height": 15.0,
+                        "thickness": 1.5
+                    }
+                ]
+            },
+            {
+                "id": "floor_1",
+                "name": "First Floor",
+                "elevation": 15.0,
+                "height": 15.0,
+                "boundaries": [
+                    {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    {
+                        "x": 50.0,
+                        "y": 0.0
+                    },
+                    {
+                        "x": 50.0,
+                        "y": 40.0
+                    },
+                    {
+                        "x": 0.0,
+                        "y": 40.0
+                    }
+                ],
+                "thickness": 1.5,
+                "walls": [
+                    {
+                        "id": "wall_1_1",
+                        "start": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "end": {
+                            "x": 50.0,
+                            "y": 0.0
+                        },
+                        "height": 15.0,
+                        "thickness": 1.5
+                    },
+                    {
+                        "id": "wall_1_2",
+                        "start": {
+                            "x": 50.0,
+                            "y": 0.0
+                        },
+                        "end": {
+                            "x": 50.0,
+                            "y": 40.0
+                        },
+                        "height": 15.0,
+                        "thickness": 1.5
+                    },
+                    {
+                        "id": "wall_1_3",
+                        "start": {
+                            "x": 50.0,
+                            "y": 40.0
+                        },
+                        "end": {
+                            "x": 0.0,
+                            "y": 40.0
+                        },
+                        "height": 15.0,
+                        "thickness": 1.5
+                    },
+                    {
+                        "id": "wall_1_4",
+                        "start": {
+                            "x": 0.0,
+                            "y": 40.0
+                        },
+                        "end": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "height": 15.0,
+                        "thickness": 1.5
+                    },
+                    {
+                        "id": "wall_1_5",
+                        "start": {
+                            "x": 25.0,
+                            "y": 0.0
+                        },
+                        "end": {
+                            "x": 25.0,
+                            "y": 25.0
+                        },
+                        "height": 15.0,
+                        "thickness": 1.5
+                    },
+                    {
+                        "id": "wall_1_6",
+                        "start": {
+                            "x": 25.0,
+                            "y": 25.0
+                        },
+                        "end": {
+                            "x": 50.0,
+                            "y": 25.0
+                        },
+                        "height": 15.0,
+                        "thickness": 1.5
+                    }
+                ]
+            }
+        ],
+        "stairs": [
+            {
+                "id": "stair_0_1",
+                "bottom_floor": "floor_0",
+                "top_floor": "floor_1",
+                "bottom_point": {
+                    "x": 40.0,
+                    "y": 30.0
+                },
+                "top_point": {
+                    "x": 40.0,
+                    "y": 30.0
+                },
+                "width": 6.0,
+                "direction": "north",
+                "length": 15.0
+            }
+        ]
+    }
+}

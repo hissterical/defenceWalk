@@ -1,0 +1,56 @@
+{
+    "floors": [
+        {
+            "width": 20,
+            "length": 15,
+            "doors": [
+                {
+                    "x": 9,
+                    "y": 0,
+                    "width": 2,
+                    "length": 0
+                }
+            ],
+            "stairs": [
+                {
+                    "x": 16,
+                    "y": 0,
+                    "width": 4,
+                    "length": 4
+                }
+            ]
+        },
+        {
+            "width": 20,
+            "length": 15,
+            "doors": [],
+            "stairs": [
+                {
+                    "x": 16,
+                    "y": 0,
+                    "width": 4,
+                    "length": 4
+                }
+            ]
+        },
+        {
+            "width": 20,
+            "length": 15,
+            "doors": [],
+            "stairs": [
+                {
+                    "x": 16,
+                    "y": 0,
+                    "width": 4,
+                    "length": 4
+                }
+            ]
+        },
+        {
+            "width": 20,
+            "length": 15,
+            "doors": [],
+            "stairs": []
+        }
+    ]
+}

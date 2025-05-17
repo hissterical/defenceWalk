@@ -16,6 +16,9 @@ public class BlueprintProcessor : MonoBehaviour
     [Tooltip("Units per pixel conversion factor")]
     public float unitsPerPixel = 0.01f;
 
+    [Tooltip("Overall scale factor for the entire structure")]
+    public float scale = 1.0f;
+
     [Tooltip("Material for walls")]
     public Material wallMaterial;
 
@@ -95,6 +98,7 @@ public class BlueprintProcessor : MonoBehaviour
         {
             wallsContainer = new GameObject("Walls");
             wallsContainer.transform.SetParent(transform);
+            wallsContainer.transform.localScale = Vector3.one * scale;
         }
 
         // Process walls based on wall_segments if available (more precise)
@@ -157,7 +161,7 @@ public class BlueprintProcessor : MonoBehaviour
     }
 
     // Determines if a wall is a simple line or a complex polygon
-    private bool IsSimpleWall(Wall wall)
+    private bool IsSimpleWall(Waall wall)
     {
         // A wall is simple if it's very thin in one dimension
         if (wall.bounds != null)
@@ -218,7 +222,7 @@ public class BlueprintProcessor : MonoBehaviour
     }
 
     // Creates a complex wall from a polygon shape
-    private void CreateWallFromPolygon(Wall wall)
+    private void CreateWallFromPolygon(Waall wall)
     {
         // Create wall container
         GameObject wallObj = new GameObject(wall.id ?? "ComplexWall");
@@ -311,7 +315,7 @@ public class BlueprintProcessor : MonoBehaviour
         textMesh.alignment = TextAlignment.Center;
         textMesh.color = Color.black;
 
-        // Scale text appropriately
+        // Scale text appropriately (make sure it's readable even when we scale the structure)
         textObj.transform.localScale = new Vector3(0.1f, 0.1f, 0.1f);
     }
 
@@ -329,6 +333,7 @@ public class BlueprintProcessor : MonoBehaviour
         {
             floorsContainer = new GameObject("Floors");
             floorsContainer.transform.SetParent(transform);
+            floorsContainer.transform.localScale = Vector3.one * scale;
         }
 
         // Process each room to create floors
@@ -427,6 +432,23 @@ public class BlueprintProcessor : MonoBehaviour
 
         return new Vector3(unitX, 0, unitZ);
     }
+
+    // Runtime update of scale (can be called via script or editor button)
+    public void UpdateScale(float newScale)
+    {
+        scale = newScale;
+
+        // Apply scale to existing containers
+        if (wallsContainer != null)
+        {
+            wallsContainer.transform.localScale = Vector3.one * scale;
+        }
+
+        if (floorsContainer != null)
+        {
+            floorsContainer.transform.localScale = Vector3.one * scale;
+        }
+    }
 }
 
 // JSON data structures for deserializing the blueprint data
@@ -439,14 +461,14 @@ public class BlueprintWrapper
 [System.Serializable]
 public class BlueprintData
 {
-    public List<Wall> walls;
+    public List<Waall> walls;
     public List<WallSegment> wall_segments;
     public List<Room> rooms;
     public ImageDimensions image_dimensions;
 }
 
 [System.Serializable]
-public class Wall
+public class Waall
 {
     public string id;
     public string type;  // "horizontal" or "vertical"
