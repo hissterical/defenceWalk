@@ -1,5 +1,13 @@
 .plastic
 ignore.conf
+Assets/HDRPDefaultResources
+Assets/TerrainDemoScene_URP
+Assets/TextMesh Pro
+
+
+*.meta
+
+
 
 # This .gitignore file should be placed at the root of your Unity project directory
 #
